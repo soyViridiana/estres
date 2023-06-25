@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="coppel.css">
+    <title>COPPEL</title>
+</head>
+<body onload="calcular()">
+    <div class="container text-center"></div>
+        <h1 class="bg-warning text-primary mt-3 p-2">COPPEL</h1>
+       
+        <h3>PRODUCTO:</h3>
+        <select id="producto" onchange="calcular()">
+            <option value="tv">TV</option>
+            <option value="moto">Moto</option>
+            <option value="sala">Sala</option>
+            <option value="refri">Refri</option>
+            <option value="lavadora">Lavadora</option>
+        </select>
+        <div id="img"></div>
+        <div id="precio">Precio: $0.00 MXN</div>
+        <hr>
+        <h3>PLAZO</h3>
+        <input type="radio" name="plazo" id="uno" onchange="calcular()" checked />6 Meses
+        (+10%)<br/>
+        <input type="radio" name="plazo" id="dos" onchange="calcular()" />12 Meses
+        (+15%)<br/>
+        <input type="radio" name="plazo" id="tres" onchange="calcular()" />18 Meses
+        (+20%)<br/>
+        <br>
+        <h3>CANTIDAD</h3> 
+        <input type="number" value="1" min="1" max="10" id="cantidad" onchange="calcular()"/>
+        <br>
+        <br>
+        <div id="contado">De contado: $ 0.00 MXN</div>
+        <div id="credito">A credito: $ 0.00 MXN</div>
+        <div id="abono">Abono mensual: $ 0.00 MXN</div>
+        <br>
+        <br>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.18/dist/sweetalert2.all.min.js"></script>
+        <script src="coppel.js"></script>
+</body>
+</html>
